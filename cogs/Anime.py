@@ -27,6 +27,11 @@ class Anime(commands.Cog):
     @commands.command()
     async def sob(self, ctx):
         await ctx.send("https://tenor.com/view/umaru-san-cry-tears-sad-sob-gif-5086387")
+       
+    @commands.command()
+    async def cheesecake(self, ctx):
+        await ctx.send("https://tenor.com/view/national-cheesecake-day-cheesecake-happy-cheesecake-day-gif-12249057")
+
     # ---------------------------------------------------------------------
 
     @commands.Cog.listener()
