@@ -37,6 +37,7 @@ async def reload(ctx, *, name: str):
         bot.reload_extension(f"cogs.{name}")
     except Exception as e:
         return await ctx.send(e)
+    await ctx.message.delete()
     await ctx.send(f'"**{name}**" Cog reloaded')
 
 @bot.command()
@@ -46,6 +47,7 @@ async def unload(ctx, *, name: str):
         bot.unload_extension(f"cogs.{name}")
     except Exception as e:
         return await ctx.send(e)
+    await ctx.message.delete()
     await ctx.send(f'"**{name}**" Cog unloaded')
 
 @bot.command()
@@ -55,6 +57,7 @@ async def load(ctx, *, name: str):
         bot.load_extension(f"cogs.{name}")
     except Exception as e:
         return await ctx.send(e)
+    await ctx.message.delete()
     await ctx.send(f'"**{name}**" Cog loaded')
 
 for file in os.listdir("./cogs"):

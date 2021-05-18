@@ -23,10 +23,12 @@ class Admin(commands.Cog):
     
     @commands.command()
     async def ping(self, ctx):
+        await ctx.message.delete()
         await ctx.send(f"Latency: {round(self.bot.latency * 1000)} ms")
 
     @commands.command()
     async def argcheck(self, ctx, *args):
+        await ctx.message.delete()
         await ctx.send('{} arguments: {}'.format(len(args), ', '.join(args)))
 
     # ---------------------------------------------------------------------
