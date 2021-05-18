@@ -16,13 +16,17 @@ class Anime(commands.Cog):
     # ALL ANIME COMMANDS GO IN HERE AS FUNCTIONS --------------------------
 
     # I will condense these into a gif command at some point
-    @commands.command() 
+    @commands.command()
     async def deku(self, ctx):
         await ctx.send("https://tenor.com/view/anime-headbang-gif-6035620")
 
+    @commands.command()
     async def hehehe(self, ctx):
         await ctx.send("https://tenor.com/view/naruto-smile-gif-5677612")
 
+    @commands.command()
+    async def sob(self, ctx):
+        await ctx.send("https://tenor.com/view/umaru-san-cry-tears-sad-sob-gif-5086387")
     # ---------------------------------------------------------------------
 
     @commands.Cog.listener()
@@ -31,3 +35,4 @@ class Anime(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Anime(bot))
+
